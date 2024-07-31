@@ -1,16 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.querySelector('input[type="text"]');
-    const photos = document.querySelectorAll('.photo-gallery .pic');
+const images = document.querySelectorAll('.pic');
+const searchInput = document.querySelector('input[type="text"]');
 
-    searchInput.addEventListener('input', function() {
-        const searchTerm = searchInput.value.toLowerCase();
-        photos.forEach(photo => {
-            const category = photo.classList[1].toLowerCase();
-            if (category.includes(searchTerm)) {
-                photo.style.display = 'block';
-            } else {
-                photo.style.display = 'none';
-            }
-        });
-    });
-});
+function search() {
+    const keyword = searchInput.value.toLowerCase();
+    images.forEach((image) => {
+        const imageClass = image.classList[1].toLowerCase();
+
+        if (imageClass.includes(keyword)){
+            image.style.display = 'block';
+        }
+        else{
+          image.style.display = 'none';
+        }
+  });
+}
+
+searchInput.addEventListener('input', search);

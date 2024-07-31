@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <input type="radio" name ="Photos" id="check1" checked>
     <input type="radio" name ="Photos" id="check2">
     <input type="radio" name ="Photos" id="check3">
@@ -23,12 +23,12 @@
             <label for="check3">Dog</label>
             <label for="check4">Rabit</label>
             <label for="check5">Others</label>
-    
+
             <input type="text" placeholder="search...">
             <label for="search"><b><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg></b></label>
         </div>
-    
-    
+
+
     <div class = "photo-gallery">
         <div class = "pic Cat">
             <img src="https://th.bing.com/th/id/OIP.44dnstQAW4ZeGFTCZemrfgHaEb?rs=1&pid=ImgDetMain">
@@ -83,18 +83,6 @@
         </div>
     </div>
 </div>
-<script>
-    document.getElementById('searchInput').addEventListener('input', function() {
-        var searchValue = this.value.toLowerCase();
-        var pics = document.querySelectorAll('.pic');
-        pics.forEach(function(pic) {
-            if (pic.classList.contains(searchValue)) {
-                pic.style.display = 'block';
-            } else {
-                pic.style.display = 'none';
-            }
-        });
-    });
-</script>
+<script src="act.js"></script>
 </body>
 </html>
