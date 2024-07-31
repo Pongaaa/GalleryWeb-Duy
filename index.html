@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <input type="radio" name ="Photos" id="check1" checked>
+    <input type="radio" name ="Photos" id="check2">
+    <input type="radio" name ="Photos" id="check3">
+    <input type="radio" name ="Photos" id="check4">
+    <input type="radio" name ="Photos" id="check5">
+
+<div class="container">
+    <h1>PHOTO GALLERY</h1>
+        <div class="top-content">
+            <h3>Photo</h3>
+            <label for="check1">All photos</label>
+            <label for="check2">Cat</label>
+            <label for="check3">Dog</label>
+            <label for="check4">Rabit</label>
+            <label for="check5">Others</label>
+    
+            <input type="text" placeholder="search...">
+            <label for="search"><b><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg></b></label>
+        </div>
+    
+    
+    <div class = "photo-gallery">
+        <div class = "pic Cat">
+            <img src="https://th.bing.com/th/id/OIP.44dnstQAW4ZeGFTCZemrfgHaEb?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Dog">
+            <img src="https://th.bing.com/th/id/OIP.OT_m1hzXibs-tdpvR-EUkQHaE8?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Rabit">
+            <img src="https://th.bing.com/th/id/OIP.8IQr8-HfRvzaHTytRgF09QHaEK?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Others">
+            <img src="https://th.bing.com/th/id/OIP.4x1Q82DcZBpE6zmVs0gm4gAAAA?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Others">
+            <img src="https://danviet.mediacdn.vn/upload/2-2019/images/2019-05-09/Phap-15-con-cuu-duoc-nhan-vao-lop-hoc-chung-voi-nguoi-c-1557375327-width1400height933.jpg">
+        </div>
+        <div class = "pic Cat">
+            <img src="https://th.bing.com/th/id/OIP._EIpba1Baqr3uzDKoodoMAHaEd?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Others">
+            <img src="https://static.vinwonders.com/production/su-tu-top-banner.jpg">
+        </div>
+        <div class = "pic Dog">
+            <img src="https://th.bing.com/th/id/OIP.6ffIZCinTcU4pBFZ21sW6AHaE7?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Rabit">
+            <img src="https://th.bing.com/th/id/OIP.GlR2B1e6hVnq1gxgSpva0QHaFM?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Others">
+            <img src="https://cdn-i.vtcnews.vn/resize/th/upload/2024/03/18/0brown-bear-on-a-rockjpg-10183456.jpg">
+        </div>
+        <div class = "pic Cat">
+            <img src="https://th.bing.com/th/id/OIP.JdjSF7yPa2PodsGvlG0RCQHaE6?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Dog">
+            <img src="https://th.bing.com/th/id/OIP.xZXk6JbJrrfF5mA4eRGbOAHaE8?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Cat">
+            <img src="https://th.bing.com/th/id/OIP.UF33GkNrbrrhMGC1xo0_KwHaFB?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Dog">
+            <img src="https://th.bing.com/th/id/OIP.R29dra_6jVj2y_2HMU8fqQHaFK?rs=1&pid=ImgDetMain">
+        </div>
+        <div class = "pic Others">
+            <img src="https://vov.vn/sites/default/files/styles/large/public/2022-01/ho%20manh%20thu%201%20-anthamborenationalpark.jpg">
+        </div>
+        <div class = "pic Rabit">
+            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/07/11/bunny-rabbit.jpg">
+        </div>
+        <div class = "pic Others">
+            <img src="https://suckhoedoisong.qltns.mediacdn.vn/Images/hohuong/2020/04/25/con_de_cho_ta_nhieu_vi_thuoc_quy.jpg?fbclid=IwY2xjawEXIuZleHRuA2FlbQIxMAABHVo5wUPz0lRyrpwjIbhKNYZjrSEJ1aktEmq1eyjlDJ1F5m3NaWu4yD6_wQ_aem_WheArBDvTZ6iOfHCkROboA">
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+        var searchValue = this.value.toLowerCase();
+        var pics = document.querySelectorAll('.pic');
+        pics.forEach(function(pic) {
+            if (pic.classList.contains(searchValue)) {
+                pic.style.display = 'block';
+            } else {
+                pic.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>

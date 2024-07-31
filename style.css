@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+input{
+    display: none
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: rgb(253, 83, 83);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-content{
+    background-color: rgb(238, 238, 238);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
+    flex-wrap: wrap;
+}
+h3{
+    height: 100%;
+    background-color: rgb(190, 187, 187);
+    line-height: 60px;
+    padding: 0 100px;
+    color: white;
+}
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 24px;
+    line-height: 60px;
+    color:rgb(120, 120, 120);
+    cursor: pointer;
+    transition: color .5s;
+}
+
+label:hover{
+    color: black;
+}
+
+input[type=text]{
+    align-items: last baseline;
+    width: 10%;
+    padding: 6px 10px;
+    margin: 0 -40px 0 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+b{
+    margin-top: 5px;
+    margin: 5px -20px;
+    display: inline-block;
+}
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgrey;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.pic img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+.pic::before{
+    content: "CAO DUY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    width: 80%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.pic:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .8s;
+    
+}
+
+.pic:hover::after {
+    height: 100%;
+}
+
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 0.5;
+}
+
+#check1:checked ~ .container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;
+}
+
+#check2:checked ~ .container .photo-gallery .Cat{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: 0.5s;
+}
+#check2:checked ~ .container .photo-gallery .Dog,
+#check2:checked ~ .container .photo-gallery .Rabit,
+#check2:checked ~ .container .photo-gallery .Others{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+};
+
+#check3:checked ~ .container .photo-gallery .Dog{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: 0.5s;
+}
+#check3:checked ~ .container .photo-gallery .Cat,
+#check3:checked ~ .container .photo-gallery .Rabit,
+#check3:checked ~ .container .photo-gallery .Others{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+};
+
+
+#check4:checked ~ .container .photo-gallery .Rabit{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: 0.5s;
+}
+#check4:checked ~ .container .photo-gallery .Cat,
+#check4:checked ~ .container .photo-gallery .Dog,
+#check4:checked ~ .container .photo-gallery .Others{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+};
+
+#check5:checked ~ .container .photo-gallery .Others{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: 0.5s;
+}
+#check5:checked ~ .container .photo-gallery .Cat,
+#check5:checked ~ .container .photo-gallery .Dog,
+#check5:checked ~ .container .photo-gallery .Rabit{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
